@@ -75,7 +75,7 @@ function ActionSheetItem (props) {
             props.innerStyle,
             props.first && styles.innerFirst,
             props.last && styles.innerLast,
-            !props.last && styles.innerNotLast
+            !props.last && styles.innerNotLast,
           ]}
         >
           {props.iconComponent && (
@@ -126,7 +126,7 @@ const styles = StyleSheet.create({
     height: theme.defaultItemHeight,
     justifyContent: 'center',
     alignItems: 'center',
-    paddingHorizontal: theme.gutter
+    paddingHorizontal: theme.gutter,
   },
   innerFirst: {
     borderTopRightRadius: theme.baseBorderRadius,
@@ -143,12 +143,11 @@ const styles = StyleSheet.create({
   iconContainer: {
     alignItems: 'center',
     justifyContent: 'center',
-    top: theme.gutter / 5,
-    marginRight: theme.gutter
+    marginRight: theme.gutter,
   },
   textContainer: {
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   textContainerWithIcon: {
     position: 'absolute',
