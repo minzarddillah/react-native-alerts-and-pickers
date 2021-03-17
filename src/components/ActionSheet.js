@@ -38,7 +38,8 @@ class ActionSheet extends React.Component {
     afterClose: PropTypes.func,
 
     // Styles
-    overlayStyle: ViewPropTypes.style
+    overlayStyle: ViewPropTypes.style,
+    useNativeDriver: PropTypes.bool
   }
 
   static defaultProps = {
@@ -51,7 +52,8 @@ class ActionSheet extends React.Component {
     slideAnimationDuration: 250,
 
     // styles
-    overlayStyle: {}
+    overlayStyle: {},
+    useNativeDriver: false
   }
 
   constructor (props) {
@@ -104,7 +106,8 @@ class ActionSheet extends React.Component {
       const options = {
         toValue: this.state.show ? 0 : 1,
         duration: this.props.slideAnimationDuration,
-        animation: theme.translateEasing
+        animation: theme.translateEasing,
+        useNativeDriver: this.props.useNativeDriver
       }
 
       Animated.timing(
